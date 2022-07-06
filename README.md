@@ -165,7 +165,7 @@ TensorBoard is another great debugging and visualization tool. The model is conf
 
 ## 8. Plotting the performance metrics (confusion matrices/precision-recall curve)
 
-![](0000002_00.png)
+![](confusion_matrix_maskrcnn_per_image_mask_rcnn_microcontroller_detection_0050.png)
 ![](0000002_00.png)
 
 # Training on Your Own Dataset
