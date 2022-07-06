@@ -111,11 +111,11 @@ After the transfer learning completes, the trained weights are saved in the `Kan
 
 The `oralcancer_prediction.py` makes prediction based on the trained weights.
 
-![oralcancer Test Image](assets/kangaro-test.png)
+![oralcancer Test Image](training datasets/000001_00.png)
 
 Note that the [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) project uses the same training and testing code as in the old project.
 
-![Instance Segmentation Sample](assets/street.png)
+![Instance Segmentation Sample](predicted results/000001_00.png)
 
 The repository includes:
 * Source code of Mask R-CNN built on FPN and ResNet101 inside the `mrcnn` directory.
