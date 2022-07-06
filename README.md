@@ -350,17 +350,3 @@ A proof of concept project by [Esri](https://www.esri.com/), in collaboration wi
 A project from Japan to automatically track cells in a microfluidics platform. Paper is pending, but the source code is released.
 
 ![](assets/project_usiigaci1.gif) ![](assets/project_usiigaci2.gif)
-
-### [Characterization of Arctic Ice-Wedge Polygons in Very High Spatial Resolution Aerial Imagery](http://www.mdpi.com/2072-4292/10/9/1487)
-Research project to understand the complex processes between degradations in the Arctic and climate change. By Weixing Zhang, Chandi Witharana, Anna Liljedahl, and Mikhail Kanevskiy.
-![image](assets/project_ice_wedge_polygons.png)
-
-### [Mask-RCNN Shiny](https://github.com/huuuuusy/Mask-RCNN-Shiny)
-A computer vision class project by HU Shiyu to apply the color pop effect on people with beautiful results.
-![](assets/project_shiny1.jpg)
-
-### [Mapping Challenge](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn): Convert satellite imagery to maps for use by humanitarian organisations.
-![Mapping Challenge](assets/mapping_challenge.png)
-
-### [GRASS GIS Addon](https://github.com/ctu-geoforall-lab/i.ann.maskrcnn) to generate vector masks from geospatial imagery. Based on a [Master's thesis](https://github.com/ctu-geoforall-lab-projects/dp-pesek-2018) by Ond?ej Pešek.
-![GRASS GIS Image](assets/project_grass_gis.png)
