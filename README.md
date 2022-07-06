@@ -145,8 +145,8 @@ This is an example of final detection boxes (dotted lines) and the refinement ap
 ## 3. Mask Generation
 Examples of generated masks. These then get scaled and placed on the image in the right location.
 
-![](training_datasets/000001_00_label.png)
-![](training_datasets/000001_00_mask.png)
+![](training_dataset/000001_00_label.png)
+![](training_dataset/000001_00_mask.png)
 
 ## 4.Layer activations
 Often it's useful to inspect the activations at different layers to look for signs of trouble (all zeros or random noise).
