@@ -148,7 +148,7 @@ Examples of generated masks. These then get scaled and placed on the image in th
 ![](training_dataset/000001_00_label.png)
 ![](training_dataset/000001_00_mask.png)
 
-## 4.Layer activations
+## 4. Layer activations
 Often it's useful to inspect the activations at different layers to look for signs of trouble (all zeros or random noise).
 
 ## 5. Weight Histograms
@@ -161,7 +161,12 @@ TensorBoard is another great debugging and visualization tool. The model is conf
 
 ## 7. Composing the different pieces into a final result
 
-![](predicted_result/000001_00.png)
+![](predicted_result/0000002_00.png)
+
+## 8. Plotting the performance metrics (confusion matrices/precision-recall curve)
+
+![](0000002_00.png)
+![](0000002_00.png)
 
 # Training on Your Own Dataset
 
