@@ -161,7 +161,7 @@ TensorBoard is another great debugging and visualization tool. The model is conf
 
 ## 7. Composing the different pieces into a final result
 
-![](predicted_result/0000002_00.png)
+![](predicted_result/000001_00.png)
 
 ## 8. Plotting the performance metrics (confusion matrices/precision-recall curve)
 
