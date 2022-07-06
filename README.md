@@ -99,23 +99,10 @@ The **oralcancer-transfer-learning** directory has both the data and code for tr
 ```
 oralcancer-transfer-learning:
 	oralcancer:
-		images:
-		annots:
-	oralcancer_training.py
-	oralcancer_prediction.py
+		images: training_datasets/*_00.png
+		annots: training_datasets/*_00_mask.png
+	MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py
 ```
-
-The `oralcancer_training.py` script does transfer learning to a pre-trained weights using the COCO dataset. Download these weights from [here](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5): https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
-
-After the transfer learning completes, the trained weights are saved in the `Kangaro_mask_rcnn_trained.h5` file. 
-
-The `oralcancer_prediction.py` makes prediction based on the trained weights.
-
-![oralcancer Test Image](training_datasets/000001_00.png)
-
-Note that the [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) project uses the same training and testing code as in the old project.
-
-![Instance Segmentation Sample](predicted_result/000001_00.png)
 
 The repository includes:
 * Source code of Mask R-CNN built on FPN and ResNet101 inside the `mrcnn` directory.
