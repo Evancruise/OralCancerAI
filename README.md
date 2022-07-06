@@ -111,11 +111,11 @@ After the transfer learning completes, the trained weights are saved in the `Kan
 
 The `oralcancer_prediction.py` makes prediction based on the trained weights.
 
-![oralcancer Test Image](training datasets/000001_00.png)
+![oralcancer Test Image](training_datasets/000001_00.png)
 
 Note that the [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) project uses the same training and testing code as in the old project.
 
-![Instance Segmentation Sample](predicted results/000001_00.png)
+![Instance Segmentation Sample](predicted_result/000001_00.png)
 
 The repository includes:
 * Source code of Mask R-CNN built on FPN and ResNet101 inside the `mrcnn` directory.
@@ -151,66 +151,30 @@ To help with debugging and understanding the model, there are 3 notebooks
 
 ## 1. Anchor sorting and filtering
 Visualizes every step of the first stage Region Proposal Network and displays positive and negative anchors along with anchor box refinement.
-![](assets/detection_anchors.png)
 
 ## 2. Bounding Box Refinement
 This is an example of final detection boxes (dotted lines) and the refinement applied to them (solid lines) in the second stage.
-![](assets/detection_refinement.png)
 
 ## 3. Mask Generation
 Examples of generated masks. These then get scaled and placed on the image in the right location.
 
-![](assets/detection_masks.png)
+![](training_datasets/000001_00_label.png)
+![](training_datasets/000001_00_mask.png)
 
 ## 4.Layer activations
 Often it's useful to inspect the activations at different layers to look for signs of trouble (all zeros or random noise).
 
-![](assets/detection_activations.png)
-
 ## 5. Weight Histograms
 Another useful debugging tool is to inspect the weight histograms. These are included in the inspect_weights.ipynb notebook.
-
-![](assets/detection_histograms.png)
 
 ## 6. Logging to TensorBoard
 TensorBoard is another great debugging and visualization tool. The model is configured to log losses and save weights at the end of every epoch.
 
-![](assets/detection_tensorboard.png)
+![](logs/detection_tensorboard.png)
 
 ## 7. Composing the different pieces into a final result
 
-![](assets/detection_final.png)
-
-
-# Training on MS COCO
-We're providing pre-trained weights for MS COCO to make it easier to start. You can
-use those weights as a starting point to train your own variation on the network.
-Training and evaluation code is in `samples/coco/coco.py`. You can import this
-module in Jupyter notebook (see the provided notebooks for examples) or you
-can run it directly from the command line as such:
-
-```
-# Train a new model starting from pre-trained COCO weights
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=coco
-
-# Train a new model starting from ImageNet weights
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=imagenet
-
-# Continue training a model that you had trained earlier
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=/path/to/weights.h5
-
-# Continue training the last model you trained. This will find
-# the last trained weights in the model directory.
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=last
-```
-
-You can also run the COCO evaluation code with:
-```
-# Run COCO evaluation on the last trained model
-python3 samples/coco/coco.py evaluate --dataset=/path/to/coco/ --model=last
-```
-
-The training schedule, learning rate, and other parameters should be set in `samples/coco/coco.py`.
+![](predicted_result/000001_00.png)
 
 # Training on Your Own Dataset
 
