@@ -1,5 +1,3 @@
-# OralCancerAI
-
 # Mask R-CNN for Object Detection and Segmentation using TensorFlow 2.0
 
 The [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) project edits the original [Mask_RCNN](https://github.com/matterport/Mask_RCNN) project, which only supports TensorFlow 1.0, so that it works on TensorFlow 2.0. Based on this new project, the [Mask R-CNN](https://arxiv.org/abs/1703.06870) can be trained and tested (i.e make predictions) in TensorFlow 2.0. The Mask R-CNN model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
@@ -96,24 +94,24 @@ mrcnn.visualize.display_instances(image=image,
 
 # Transfer Learning
 
-The **kangaroo-transfer-learning** directory has both the data and code for training and testing the Mask R-CNN model using TensorFlow 2.0. Here is the content of the directory:
+The **oralcancer-transfer-learning** directory has both the data and code for training and testing the Mask R-CNN model using TensorFlow 2.0. Here is the content of the directory:
 
 ```
-kangaroo-transfer-learning:
-	kangaroo:
+oralcancer-transfer-learning:
+	oralcancer:
 		images:
 		annots:
-	kangaroo_training.py
-	kangaroo_prediction.py
+	oralcancer_training.py
+	oralcancer_prediction.py
 ```
 
-The `kangaroo_training.py` script does transfer learning to a pre-trained weights using the COCO dataset. Download these weights from [here](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5): https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
+The `oralcancer_training.py` script does transfer learning to a pre-trained weights using the COCO dataset. Download these weights from [here](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5): https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 
 After the transfer learning completes, the trained weights are saved in the `Kangaro_mask_rcnn_trained.h5` file. 
 
-The `kangaroo_prediction.py` makes prediction based on the trained weights.
+The `oralcancer_prediction.py` makes prediction based on the trained weights.
 
-![Kangaroo Test Image](assets/kangaro-test.png)
+![oralcancer Test Image](assets/kangaro-test.png)
 
 Note that the [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) project uses the same training and testing code as in the old project.
 
