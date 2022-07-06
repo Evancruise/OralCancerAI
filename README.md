@@ -261,4 +261,6 @@ Use this bibtex to cite this repository:
 ### [Usiigaci: Label-free Cell Tracking in Phase Contrast Microscopy](https://github.com/oist/usiigaci)
 A project from Japan to automatically track cells in a microfluidics platform. Paper is pending, but the source code is released.
 
-![](assets/project_usiigaci1.gif) ![](assets/project_usiigaci2.gif)
+## App screenshot
+
+![](screenshot) ![](screenshot.jpg)
