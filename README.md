@@ -218,16 +218,15 @@ The training schedule, learning rate, and other parameters should be set in `sam
 
 Start by reading this [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). It covers the process starting from annotating images to training to using the results in a sample application.
 
-# tranining command:
+# tranining command
+
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode training --backbone resnet50
 
-python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode Cascade_MaskRCNN --training_or_inference_mode training --backbone resnet50
-
-# continue training command:
+# continue training command
 
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode training --model_path logs/microcontroller_detection20211005T1315_resnet50/mask_rcnn_resnet50_microcontroller_detection_0109.h5
 
-# inference command:
+# inference command
 
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode inference --model_path logs/microcontroller_detection20211004T1330_resnet50/mask_rcnn_resnet50_microcontroller_detection_0079.h5 --backbone resnet50 --device 0
 
@@ -266,19 +265,6 @@ gradients (sum vs mean across batches and GPUs). Or, maybe the official model us
 clipping to avoid this issue. We do use gradient clipping, but don't set it too aggressively.
 We found that smaller learning rates converge faster anyway so we go with that.
 
-## Citation
-Use this bibtex to cite this repository:
-```
-@misc{matterport_maskrcnn_2017,
-  title={Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow},
-  author={Waleed Abdulla},
-  year={2017},
-  publisher={Github},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/matterport/Mask_RCNN}},
-}
-```
-
 ## Contributing
 Contributions to this repository are welcome. Examples of things you can contribute:
 * Speed Improvements. Like re-writing some Python code in TensorFlow or Cython.
@@ -290,18 +276,6 @@ You can also [join our team](https://matterport.com/careers/) and help us build 
 
 ## Requirements
 Python 3 (tested on Python 3.7.3), TensorFlow 2.0.0, Keras 2.2.4-tf and other common packages listed in `requirements.txt`.
-
-### MS COCO Requirements:
-To train or test on MS COCO, you'll also need:
-* pycocotools (installation instructions below)
-* [MS COCO Dataset](http://cocodataset.org/#home)
-* Download the 5K [minival](https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0)
-  and the 35K [validation-minus-minival](https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0)
-  subsets. More details in the original [Faster R-CNN implementation](https://github.com/rbgirshick/py-faster-rcnn/blob/master/data/README.md).
-
-If you use Docker, the code has been verified to work on
-[this Docker container](https://hub.docker.com/r/waleedka/modern-deep-learning/).
-
 
 ## Installation
 1. Clone this repository
@@ -320,31 +294,20 @@ If you use Docker, the code has been verified to work on
     * Windows: https://github.com/philferriere/cocoapi.
     You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
 
-# Projects Using this Model
-If you extend this model to other datasets or build projects that use it, we'd love to hear from you.
+## Citation
+Use this bibtex to cite this repository:
+```
+@misc{matterport_maskrcnn_2017,
+  title={Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow},
+  author={Waleed Abdulla},
+  year={2017},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/matterport/Mask_RCNN}},
+}
+```
 
-### [4K Video Demo](https://www.youtube.com/watch?v=OOT3UIXZztE) by Karol Majek.
-[![Mask RCNN on 4K Video](assets/4k_video.gif)](https://www.youtube.com/watch?v=OOT3UIXZztE)
-
-### [Images to OSM](https://github.com/jremillard/images-to-osm): Improve OpenStreetMap by adding baseball, soccer, tennis, football, and basketball fields.
-
-![Identify sport fields in satellite images](assets/images_to_osm.png)
-
-### [Splash of Color](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). A blog post explaining how to train this model from scratch and use it to implement a color splash effect.
-![Balloon Color Splash](assets/balloon_color_splash.gif)
-
-
-### [Segmenting Nuclei in Microscopy Images](samples/nucleus). Built for the [2018 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2018)
-Code is in the `samples/nucleus` directory.
-
-![Nucleus Segmentation](assets/nucleus_segmentation.png)
-
-### [Detection and Segmentation for Surgery Robots](https://github.com/SUYEgit/Surgery-Robot-Detection-Segmentation) by the NUS Control & Mechatronics Lab.
-![Surgery Robot Detection and Segmentation](https://github.com/SUYEgit/Surgery-Robot-Detection-Segmentation/raw/master/assets/video.gif)
-
-### [Reconstructing 3D buildings from aerial LiDAR](https://medium.com/geoai/reconstructing-3d-buildings-from-aerial-lidar-with-ai-details-6a81cb3079c0)
-A proof of concept project by [Esri](https://www.esri.com/), in collaboration with Nvidia and Miami-Dade County. Along with a great write up and code by Dmitry Kudinov, Daniel Hedges, and Omar Maher.
-![3D Building Reconstruction](assets/project_3dbuildings.png)
+## Refernece
 
 ### [Usiigaci: Label-free Cell Tracking in Phase Contrast Microscopy](https://github.com/oist/usiigaci)
 A project from Japan to automatically track cells in a microfluidics platform. Paper is pending, but the source code is released.
