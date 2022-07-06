@@ -157,7 +157,7 @@ Another useful debugging tool is to inspect the weight histograms. These are inc
 ## 6. Logging to TensorBoard
 TensorBoard is another great debugging and visualization tool. The model is configured to log losses and save weights at the end of every epoch.
 
-![](logs/detection_tensorboard.png)
+![](logs/detection_tensorboard.jpg)
 
 ## 7. Composing the different pieces into a final result
 
