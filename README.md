@@ -272,6 +272,9 @@ A project from Japan to automatically track cells in a microfluidics platform. P
 
 ## Installation
 1. Clone this repository
+   ```bash
+   git clone https://github.com/Evancruise/OralCancerAI
+   ```
 2. Install dependencies
    ```bash
    pip3 install -r requirements.txt
