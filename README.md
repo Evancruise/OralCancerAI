@@ -114,23 +114,6 @@ The repository includes:
 
 The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository (bibtex below).
 
-# Getting Started
-* [mask-rcnn-prediction.py](samples/mask-rcnn-prediction.py): A script for loading the pre-trained weights and making predictions using the Mask R-CNN model.
-* [coco_labels.txt](samples/coco_labels.txt): The class labels of the COCO dataset.
-* [demo.ipynb](demo.ipynb) Is the easiest way to start. It shows an example of using a model pre-trained on MS COCO to segment objects in your own images. It includes code to run object detection and instance segmentation on arbitrary images.
-* [train_shapes.ipynb](train_shapes.ipynb) shows how to train Mask R-CNN on your own dataset. This notebook introduces a toy dataset (Shapes) to demonstrate training on a new dataset.
-* ([model.py](mrcnn/model.py), [utils.py](mrcnn/utils.py), [config.py](mrcnn/config.py)): These files contain the main Mask RCNN implementation. 
-
-
-* [inspect_data.ipynb](inspect_data.ipynb). This notebook visualizes the different pre-processing steps
-to prepare the training data.
-
-* [inspect_model.ipynb](inspect_model.ipynb) This notebook goes in depth into the steps performed to detect and segment objects. It provides visualizations of every step of the pipeline.
-
-* [inspect_weights.ipynb](inspect_weights.ipynb)
-This notebooks inspects the weights of a trained model and looks for anomalies and odd patterns.
-
-
 # Step by Step Detection
 To help with debugging and understanding the model, there are 3 notebooks 
 ([inspect_data.ipynb](inspect_data.ipynb), [inspect_model.ipynb](inspect_model.ipynb),
