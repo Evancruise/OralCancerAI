@@ -173,21 +173,21 @@ TensorBoard is another great debugging and visualization tool. The model is conf
 Start by reading this [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). It covers the process starting from annotating images to training to using the results in a sample application.
 
 # tranining command
-
+```bash
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode training --backbone resnet50
-
+```
 # continue training command
-
+```bash
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode training --model_path logs/microcontroller_detection20211005T1315_resnet50/mask_rcnn_resnet50_microcontroller_detection_0109.h5
-
+```
 # inference command
-
+```bash
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode inference --model_path logs/microcontroller_detection20211004T1330_resnet50/mask_rcnn_resnet50_microcontroller_detection_0079.h5 --backbone resnet50 --device 0
-
+```
 # autolabel command
-
+```bash
 python MaskRCNN_Microcontroller_Segmentation_oral_cancer_dataset_tf2.py --mask_mode MaskRCNN --training_or_inference_mode autolabel --model_path logs/microcontroller_detection20210819T1431_resnet152/mask_rcnn_resnet152_microcontroller_detection_0200.h5 --backbone resnet152 --device 0
-
+```
 In summary, to train the model on your own dataset you'll need to extend two classes:
 
 ```Config```
