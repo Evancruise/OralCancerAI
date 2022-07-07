@@ -202,6 +202,10 @@ all available in one dataset.
 
 See examples in `samples/shapes/train_shapes.ipynb`, `samples/coco/coco.py`, `samples/balloon/balloon.py`, and `samples/nucleus/nucleus.py`.
 
+## App screenshot
+
+![](screenshot) ![](screenshot.jpg)
+
 ## Differences from the Official Paper
 This implementation follows the Mask RCNN paper for the most part, but there are a few cases where we deviated in favor of code simplicity and generalization. These are some of the differences we're aware of. If you encounter other differences, please do let us know.
 
@@ -233,6 +237,9 @@ Python 3 (tested on Python 3.7.3), TensorFlow 2.0.0, Keras 2.2.4-tf and other co
 
 ## Installation
 1. Clone this repository
+   ```bash
+   git clone https://github.com/Evancruise/OralCancerAI/
+   ```
 2. Install dependencies
    ```bash
    pip3 install -r requirements.txt
@@ -241,8 +248,8 @@ Python 3 (tested on Python 3.7.3), TensorFlow 2.0.0, Keras 2.2.4-tf and other co
     ```bash
     python3 setup.py install
     ```
-3. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases).
-4. (Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
+4. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases).
+5. (Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
 
     * Linux: https://github.com/waleedka/coco
     * Windows: https://github.com/philferriere/cocoapi.
@@ -265,30 +272,6 @@ Use this bibtex to cite this repository:
 
 ### [Usiigaci: Label-free Cell Tracking in Phase Contrast Microscopy](https://github.com/oist/usiigaci)
 A project from Japan to automatically track cells in a microfluidics platform. Paper is pending, but the source code is released.
-
-## App screenshot
-
-![](screenshot) ![](screenshot.jpg)
-
-## Installation
-1. Clone this repository
-   ```bash
-   git clone https://github.com/Evancruise/OralCancerAI/
-   ```
-2. Install dependencies
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-3. Run setup from the repository root directory
-    ```bash
-    python3 setup.py install
-    ```
-3. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases).
-4. (Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
-
-    * Linux: https://github.com/waleedka/coco
-    * Windows: https://github.com/philferriere/cocoapi.
-    You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
 
 # Projects Using this Model
 If you extend this model to other datasets or build projects that use it, we'd love to hear from you.
