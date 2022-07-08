@@ -202,25 +202,6 @@ gradients (sum vs mean across batches and GPUs). Or, maybe the official model us
 clipping to avoid this issue. We do use gradient clipping, but don't set it too aggressively.
 We found that smaller learning rates converge faster anyway so we go with that.
 
-# Implement PyQt
-
-## Prerequisite
-1. install required packages
-```bash
-pip install pyqt5 pyqtgraph pandas trackpy imageio--ffmpeg scikit-image==0.13
-```
-If working in the virtual environment tensorflow: it will be under /home/username/tensorflow/lib/python3.5/site-packages/pyqtgraph/graphicitems/
-
-2. wrap the app program
-
-```bash
-pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
-```
-
-## App screenshot
-
-![](screenshot) ![](screenshot.jpg)
-
 ## Contributing
 Contributions to this repository are welcome. Examples of things you can contribute:
 * Speed Improvements. Like re-writing some Python code in TensorFlow or Cython.
@@ -252,6 +233,25 @@ Python 3 (tested on Python 3.7.3), TensorFlow 2.0.0, Keras 2.2.4-tf and other co
     * Linux: https://github.com/waleedka/coco
     * Windows: https://github.com/philferriere/cocoapi.
     You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
+
+# Implement PyQt
+
+## Prerequisite
+1. install required packages
+```bash
+pip install pyqt5 pyqtgraph pandas trackpy imageio--ffmpeg scikit-image==0.13
+```
+If working in the virtual environment tensorflow: it will be under /home/username/tensorflow/lib/python3.5/site-packages/pyqtgraph/graphicitems/
+
+2. wrap the app program
+
+```bash
+pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
+```
+
+## App screenshot
+
+![](screenshot) ![](screenshot.jpg)
 
 ## Citation
 Use this bibtex to cite this repository:
