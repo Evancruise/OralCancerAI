@@ -185,25 +185,6 @@ all available in one dataset.
 
 See examples in `samples/shapes/train_shapes.ipynb`, `samples/coco/coco.py`, `samples/balloon/balloon.py`, and `samples/nucleus/nucleus.py`.
 
-# Implement PyQt
-
-# Prerequisite
-1. install required packages
-```bash
-pip install pyqt5 pyqtgraph pandas trackpy imageio--ffmpeg scikit-image==0.13
-```
-If working in the virtual environment tensorflow: it will be under /home/username/tensorflow/lib/python3.5/site-packages/pyqtgraph/graphicitems/
-
-2. wrap the app program
-
-```bash
-pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
-```
-
-# App screenshot
-
-![](screenshot) ![](screenshot.jpg)
-
 ## Differences from the Official Paper
 This implementation follows the Mask RCNN paper for the most part, but there are a few cases where we deviated in favor of code simplicity and generalization. These are some of the differences we're aware of. If you encounter other differences, please do let us know.
 
@@ -220,6 +201,25 @@ size. It might be related to differences between how Caffe and TensorFlow comput
 gradients (sum vs mean across batches and GPUs). Or, maybe the official model uses gradient
 clipping to avoid this issue. We do use gradient clipping, but don't set it too aggressively.
 We found that smaller learning rates converge faster anyway so we go with that.
+
+# Implement PyQt
+
+## Prerequisite
+1. install required packages
+```bash
+pip install pyqt5 pyqtgraph pandas trackpy imageio--ffmpeg scikit-image==0.13
+```
+If working in the virtual environment tensorflow: it will be under /home/username/tensorflow/lib/python3.5/site-packages/pyqtgraph/graphicitems/
+
+2. wrap the app program
+
+```bash
+pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
+```
+
+## App screenshot
+
+![](screenshot) ![](screenshot.jpg)
 
 ## Contributing
 Contributions to this repository are welcome. Examples of things you can contribute:
