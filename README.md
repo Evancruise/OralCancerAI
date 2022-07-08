@@ -185,6 +185,12 @@ all available in one dataset.
 
 See examples in `samples/shapes/train_shapes.ipynb`, `samples/coco/coco.py`, `samples/balloon/balloon.py`, and `samples/nucleus/nucleus.py`.
 
+# Wrapping app program
+
+```bash
+pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
+```
+
 ## App screenshot
 
 ![](screenshot) ![](screenshot.jpg)
