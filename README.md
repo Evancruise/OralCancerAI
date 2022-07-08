@@ -185,13 +185,22 @@ all available in one dataset.
 
 See examples in `samples/shapes/train_shapes.ipynb`, `samples/coco/coco.py`, `samples/balloon/balloon.py`, and `samples/nucleus/nucleus.py`.
 
-# Wrapping app program
+# Implement PyQt
+
+# Prerequisite
+1. install required packages
+```bash
+pip install pyqt5 pyqtgraph pandas trackpy imageio--ffmpeg scikit-image==0.13
+```
+If working in the virtual environment tensorflow: it will be under /home/username/tensorflow/lib/python3.5/site-packages/pyqtgraph/graphicitems/
+
+2. wrap the app program
 
 ```bash
 pyinstaller -p utils -p model_resnet -p visualize -w Oralcancerapp.py
 ```
 
-## App screenshot
+# App screenshot
 
 ![](screenshot) ![](screenshot.jpg)
 
