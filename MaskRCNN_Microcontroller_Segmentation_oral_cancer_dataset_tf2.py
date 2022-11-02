@@ -39,7 +39,6 @@ from xml.dom import minidom
 #import mrcnn.model as modellib
 from mrcnn import visualize
 # from mrcnn.model import log
-from openpyxl import Workbook
 
 # %matplotlib inline 
 
